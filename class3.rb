@@ -34,6 +34,7 @@ class Article
     @content = content
   end
 
+  #インスタンス変数の値を返すための専用のメソッドをそれぞれ定義する理由について質問中。
   def author
     @author
   end

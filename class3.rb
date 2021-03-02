@@ -1,7 +1,8 @@
-ターミナルの結果
-著者: 阿部
-タイトル: Rubyの素晴らしさについて
-本文: Awesome Ruby!
+# ターミナルの結果
+
+# 著者: 阿部
+# タイトル: Rubyの素晴らしさについて
+# 本文: Awesome Ruby!
 
 
 
@@ -13,8 +14,15 @@ class Article
     @content = content
   end
 
+  def body
+    puts "著者:#{@author}"
+    puts "タイトル:#{@title}"
+    puts "本文:#{@content}"
+  end
+
 end
 
-# "阿部","Rubyの素晴らしさについて","Awesome Ruby!"
-ariticle = Article.new("著者","タイトル","本文")
-puts author
+ariticle = Article.new("阿部","Rubyの素晴らしさについて","Awesome Ruby!")
+ariticle.body
+
+

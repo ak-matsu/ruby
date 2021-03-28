@@ -11,28 +11,15 @@
 # "hello".include? "ol"   #=> false
 # "hello".include? ?h     #=> true
 
-str = "yamada "
-if str.include?(".")|str.include?(" ")
-  puts "含まれる"
+def check_name(str)
+  if str.include?(".")
+    puts "!エラー!記号は登録できません"
+  elsif str.include?(" ")
+    puts "!エラー!空白は登録できません"
+  else
+    puts "登録完了"
+  end
 end
-
-
-
-
-# puts "名前を入力"
-# input = gets.to_s
-
-# input = gets to_s
-# kinshi = [ "."," "] 
-
-# if input == kinshi
-#   puts "含まれている"
-#   return
-# end
-
-# include?(input)
-
-
-# input = [",","."]
-
-# puts 
+puts "登録したい名前を入力してください"
+str = gets.to_s
+check_name(str)

@@ -1,19 +1,17 @@
+# 問題.1
+# ターミナルから数字を入力して、数字に応じて以下のように出力するプログラムを書いてください。
+
+# 10以下なら10以下の数字です
+# 10より大きい数値なら10より大きい数字です
+# 10以下でかつ0以下なら0以下の数字です
+
+
 num = gets.to_i
 
-if num > 0
-  puts "値は正です"
-elsif num < 0
-  puts "値は負です"
+if num <= 0
+  puts "0以下の数字です"
+elsif num <= 10
+  puts "10以下の数字です"
 else
-  puts "値は0です"
-end
-
-if num % 15 == 0
-  puts num.to_s + "は３と５の倍数です。"
-elsif num % 3 == 0
-  puts num.to_s + "は３の倍数です。"
-elsif num % 5 == 0
-  puts num.to_s + "は５の倍数です。"
-else
-  puts num.to_s + "は３の倍数でも５の倍数でもありません。"
+  puts "10より大きい数字です。"
 end

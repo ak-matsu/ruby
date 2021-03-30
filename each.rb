@@ -9,3 +9,13 @@
 # appleの合計金額は670円です
 # orangeの合計金額は300円です
 # melonの合計金額は2700円です
+
+fruits_price = [["apple", [200, 250, 220]], ["orange", [100, 120, 80]], ["melon", [1200, 1500]]]
+
+fruits_price.each do |fruit|
+  total = 0
+  fruit[1].each do |price|
+    total += price
+  end
+  puts "#{fruit[0]}の合計金額は#{total}円です"
+end

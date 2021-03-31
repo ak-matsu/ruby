@@ -12,9 +12,9 @@
 # end
 
 def in1to10(num, outside_mode)
-  if num > 1 && num < 10
+  if num >= 1 && num <= 10
     puts "数値numが1以上かつ10以下の範囲である"
-  elsif num < 0 || num > 11
+  elsif num <= 0 || num >= 11
     puts "数値numが0以下、11以上である"
   else
     puts false
@@ -23,5 +23,6 @@ end
 
 
 num = gets.to_i
+outside_mode = gets.to_s
 
-in1to10(num,boolean)
+in1to10(num,outside_mode)

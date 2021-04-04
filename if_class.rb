@@ -1,10 +1,8 @@
 def police_trouble(a,b)
-  if a && b
-    puts true
-  elsif a || b
-    puts true
-  elsif !a
-    puts false
+  if (a && b) || (!a && !b)
+    puts "True"
+  else
+    puts "False"
   end
 end
 

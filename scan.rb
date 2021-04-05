@@ -9,7 +9,11 @@
 
 s = "foobarbazfoobarbaz"
 
-  if s.scan("ba") == s.scan("ba")
-    count += 1 
-    puts count
-  end
+  # if s.scan("ba") == s.scan("ba")
+  #   count += 1 
+  #   puts count
+  # end
+
+s.scan("ba") do |mached|
+  puts mached
+end

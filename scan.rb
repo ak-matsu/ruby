@@ -7,13 +7,11 @@
 # count_hi('ABChi hi') → 2
 # count_hi('hihi') → 2
 
-s = "foobarbazfoobarbaz"
 
-  # if s.scan("ba") == s.scan("ba")
-  #   count += 1 
-  #   puts count
-  # end
-
-s.scan("ba") do |mached|
-  puts mached
+def count_hi(str)
+  puts str.scan("hi").length
 end
+
+count_hi('abc hi ho')
+count_hi('ABChi hi')
+count_hi('hihi')

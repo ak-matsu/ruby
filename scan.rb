@@ -9,11 +9,7 @@
 
 s = "foobarbazfoobarbaz"
 
-count = s.scan("ba")
-
-puts count
-
-
-
-
-# => ["ba", "ba", "ba", "ba"]
+  if s.scan("ba") == s.scan("ba")
+    count += 1 
+    puts count
+  end

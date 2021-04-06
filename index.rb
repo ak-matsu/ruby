@@ -7,12 +7,8 @@
 
 # str.index(検索したい文字列, [検索を開始する位置])
 
-
-
-
-
 def count_code(str)
-  puts str.index("code").length
+  puts str.index("code") + 1
 end
 
 count_code("codexxcode")

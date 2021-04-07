@@ -14,15 +14,15 @@
 
 
 def parrot_trouble(talking,hour)
-  if hour < 7 && hour <20
-    puts "OK"
+  if talking && (hour >= 07 && hour <= 20) 
+    puts "#{talking},時刻は#{hour}時"
   else
-    puts "NG"
+    puts "#{talking},時刻は#{hour}時"
   end
 end
 
 
-# parrot_trouble(true, 6)
-# parrot_trouble(true, 7) → OK
-# parrot_trouble(false, 6) → OK
-# parrot_trouble(false, 7) → OK
+parrot_trouble(true, 6)
+parrot_trouble(true, 7)
+parrot_trouble(false, 6)
+parrot_trouble(false, 7)

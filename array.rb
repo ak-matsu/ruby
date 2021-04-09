@@ -17,14 +17,19 @@
 # array123([1, 1, 2, 4, 1]) → False
 # array123([1, 1, 2, 1, 2, 3]) → True
 
-array = ["foo", "bar"]
-puts array.include?("bar")
-#=> true
-puts array.include?("hoge")
-#=> false
+# array = ["foo", "bar"]
+# puts array.include?("bar")
+# puts array.include?("hoge")
+
+
 
 def array123(nums)
-  if test
-    
-  end
+    if puts nums.include?(1)&&nums.include?(2)&&nums.include?(3)
+    end
+  
 end
+
+
+array123([1, 1, 2, 3, 1]) 
+array123([1, 1, 2, 4, 1])
+array123([1, 1, 2, 1, 2, 3]) 

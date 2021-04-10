@@ -11,8 +11,8 @@
 # sleep_in(false, true) → true
 
 
-def sleep_in(true,false)
-  if sleep_in(true) 
+def sleep_in(weekdays,holiday)
+  if !(weekdays) or holiday 
     puts "true"
   else
     puts "false"
@@ -22,15 +22,3 @@ end
 sleep_in(false, false)
 sleep_in(true, false)
 sleep_in(false, true)
-
-def in1to10(num, outside_mode)
-  if num >= 1 && num <= 10 || outside_mode
-    puts "True"
-  else
-    puts "False"
-  end
-end
-
-in1to10(5,false)
-in1to10(11,false)
-in1to10(11,true)

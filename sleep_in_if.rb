@@ -12,10 +12,7 @@
 
 
 def sleep_in(weekdays,holiday)
-  if !(weekdays) or holiday 
-    puts "true"
-  else
-    puts "false"
+  if puts !(weekdays) or holiday 
   end
 end
 

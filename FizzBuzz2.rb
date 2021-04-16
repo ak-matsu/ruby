@@ -7,21 +7,23 @@
 # ただし、いくつまでカウントするか、引数で指定できるものとします。
 
 # 雛形
-# def fizzbuzz(max_num)
-#   if 
+def fizzbuzz(max_num)
+  (1..max_num).each do |n|
+    if n % 15 == 0
+      puts "#{n}は15倍FizzBuzz"
+    elsif n % 5 == 0
+      puts "#{n}は5倍Buzz"
+    elsif n % 3 == 0
+      puts "#{n}は3倍Fizz"
+    else
+      puts n
+    end
+  end
+end
 
-#   elsif
-
-#   elsif
-
-#   else
-
-#   end
-# end
-
-# puts 'いくつまで数えますか？'
-# num = gets.to_i
-# fizzbuzz(num)
+puts 'いくつまで数えますか？'
+num = gets.to_i
+fizzbuzz(num)
 
 # 範囲を指定して繰り返し
 # 範囲を指定して繰り返しをする場合は、範囲演算子(..)を使用しましょう。

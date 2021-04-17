@@ -43,3 +43,17 @@ end
 extra_end('Hello')
 extra_end('ab')
 extra_end('Hi')
+
+
+# 問題.1
+# 任意の2つの文字列があります。
+# どちらかの文字列がもう一方の文字列の最後にある場合はTrueを
+# ない場合はFalseを出力するプログラムを作りましょう。
+
+# 条件として、入力された文字が大文字でも小文字でも、同一の文字として処理を行いましょう。
+# その際、大文字から小文字に変換するメソッドを使用しましょう。
+
+# 出力例：
+# end_other('Hiabc', 'abc') → True
+# end_other('AbC', 'HiaBc') → True
+# end_other('abc', 'abXabc') → True

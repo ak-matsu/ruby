@@ -49,11 +49,47 @@ extra_end('Hi')
 # 任意の2つの文字列があります。
 # どちらかの文字列がもう一方の文字列の最後にある場合はTrueを
 # ない場合はFalseを出力するプログラムを作りましょう。
-
 # 条件として、入力された文字が大文字でも小文字でも、同一の文字として処理を行いましょう。
 # その際、大文字から小文字に変換するメソッドを使用しましょう。
 
+# sliceの範囲指定
+# 範囲を指定して要素を切り取る場合は、以下のように記述して使うことができます。
+# # 要素を定義
+# array = "Hiabc"
+# #配列番号（インデックス番号）の-3から-1の範囲の文字列を切り取る
+# array.slice(-3..-1)
+# #=> abc
+
+# downcase
+# 大文字を小文字に変換するメソッドです
+# ターミナル
+# # 大文字を含んだ文字列を定義
+# irb(main):001:0> name = "Hiabc"
+# => "Hiabc"
+
+# # downcaseメソッドを使用し、小文字に変換
+# irb(main):002:0> name.downcase
+# => “hiabc”
+
+def end_other(a,b)
+  # 小文字へ変換
+  a_down = a.downcase
+  b_down = b.downcase
+  # 文字列をカウント
+  a_len = a_down.length
+  b_len = b_down.length
+
+  # 小文字に変換したものをsliceの範囲指定、配列番号を切り取る
+  # b_downとa_downが同じである or a_downとb_downが同じであるか比較
+  if b_down.slice(-(a_len)..-1) == a_down || a_down.slice(-(b_len)..-1) == b_down
+    puts "True"
+  else
+    puts "False"
+  end
+
+end
+
 # 出力例：
-# end_other('Hiabc', 'abc') → True
-# end_other('AbC', 'HiaBc') → True
-# end_other('abc', 'abXabc') → True
+ end_other('Hiabc', 'abc')
+ end_other('AbC', 'HiaBc')
+ end_other('abc', 'abXabc') 

@@ -11,18 +11,14 @@
 
 # num = rand(100)
 # puts num
-# => 32
+
 
 # num = rand(100)
 # puts num
-# => 74
 
-def rand(num)
-  if num < 5
-    puts "#{num}は4より小さい"
+num = rand(10)
+  if num >= 5
+    puts "#{num}は4より大きい"
   else
     puts "#{num}は5より小さい"
   end
-end
-
-rand(100)

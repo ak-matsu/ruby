@@ -30,4 +30,4 @@ puts "以下から一つを選んで入力してください。
  ・title
  ・genre
  ・year"
-  num1 = gets.to_s
+  puts movie = gets.to_s

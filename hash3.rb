@@ -24,10 +24,17 @@
 # title
 # ハリーポッター
 
+def movie_info(movie,info)
+  puts movie[info]
+end
+
 movie = {"title" => "ハリーポッター", "genre" => "ファンタジー", "year" => "2001年"}
 
 puts "以下から一つを選んで入力してください。
  ・title
  ・genre
  ・year"
-  puts movie = gets.to_s
+ 
+  info = gets.chomp
+
+  movie_info(movie,info)

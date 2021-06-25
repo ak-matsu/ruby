@@ -16,6 +16,7 @@ def register_book(books)
 end
 
 def show_books(books)
+  puts "平均価格: #{average_price(books)}円"
   puts "見たい番号を入力してください"
   index = 1
   books.each do |book|
@@ -30,6 +31,14 @@ def show_detail(book)
   puts "著者 #{book[:author]}"
   puts "タイトル #{book[:title]}"
   puts "価格 #{book[:price]}円"
+end
+
+def average_price(books)
+  total = 0
+  books.each do |book|
+    total += book[:price]
+  end
+  average = total / books.length
 end
 
 books = []

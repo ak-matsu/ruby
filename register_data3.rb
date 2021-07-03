@@ -26,6 +26,18 @@
 # each_with_index
 # 使用すると、配列のインデックス番号(配列の要素番号)が取得できる
 
+# 2
+# 追加する仕様
+# ・[1]の処理
+# 　これから走る距離(km)をユーザーに入力を行って貰う
+# 　これから走る距離に対して何L(リットル)ガソリンを消費するか出力を行う
+
+# 必要な知識
+# roundメソッド
+
+# 引数で指定した桁数まで数値を四捨五入する
+
+
 def register_data(cars)
   puts "車種の入力をして下さい。"
   type = gets.chomp
@@ -52,9 +64,19 @@ def show_cars(cars)
 end
 
 def show_data(car)
-  puts car[:type]
+  puts "車種:#{car[:type]}"
   puts "1Lあたりの走行可能距離:#{car[:fuel_economy]}km/l"
   puts "乗車人数:#{car[:capacity]}人"
+
+  puts "これから走る距離(km)を入力して下さい。"
+  input_distance = gets.to_f
+
+  calculate_fuel_consumption(car, input_distance)
+end
+
+def calculate_fuel_consumption(car, distance)
+  fuel_consumption = distance / car[:fuel_economy]
+  puts "その目的地までは、ガソリンを#{fuel_consumption.round(1)}L消費します。"
 end
 
 cars = []

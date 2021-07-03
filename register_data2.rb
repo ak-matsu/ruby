@@ -48,17 +48,17 @@ def register_data(data)
 
 end
 
-def hero_rank(punch,kick,jump)
-  rank = punch + kick + jump
-end
-
-
 def power(power)
   while power > 100
     puts '100以下の数字を入力してください'
       power = gets.to_i
   end
   return power
+end
+
+
+def hero_rank(punch,kick,jump)
+  rank = punch + kick + jump
 end
 
 def show_data_list(data)

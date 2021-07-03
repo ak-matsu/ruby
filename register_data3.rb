@@ -37,6 +37,11 @@
 
 # 引数で指定した桁数まで数値を四捨五入する
 
+# 3
+# 追加する仕様
+# ・[1]の処理
+# 入力された乗車人数に対して、あと何人乗ることが出来るのか、何人定員オーバーなのか出力を行う
+
 
 def register_data(cars)
   puts "車種の入力をして下さい。"
@@ -71,12 +76,28 @@ def show_data(car)
   puts "これから走る距離(km)を入力して下さい。"
   input_distance = gets.to_f
 
+  puts "これから乗る人数を入力して下さい。"
+  input_capacity = gets.to_i
+
   calculate_fuel_consumption(car, input_distance)
+  car_capacity(car, input_capacity)
 end
 
 def calculate_fuel_consumption(car, distance)
   fuel_consumption = distance / car[:fuel_economy]
   puts "その目的地までは、ガソリンを#{fuel_consumption.round(1)}L消費します。"
+end
+
+def car_capacity(car, capacity)
+  capacity = car[:capacity] - capacity
+
+  if capacity == 0
+    puts "車の定員丁度です。"
+  elsif capacity > 0
+    puts "後、車には#{capacity}人乗ることができます。"
+  else
+    puts "#{capacity.abs}人定員オーバーです。"
+  end
 end
 
 cars = []

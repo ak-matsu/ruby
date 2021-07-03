@@ -26,28 +26,36 @@
 # 　1~100以外の値が入力された場合は”100以下の数字を入力してください”と表示し、入力フェーズに戻るようにします。
 # ・show_data_listメソッドで、登録した情報から名前だけを取り出して一覧表示させましょう。
 
-def register_data
+# 3
+# 追加仕様
+# パンチ力,キック力,ジャンプ力の３つの力の合計を戦闘力とし、hero_rank メソッドを作成してABCDの４段階にランク分けします。（範囲は任意で構いません）
+
+# ヒーローランクは、一覧表示で名前,パンチ力,キック力,ジャンプ力と一緒に表示されるようにします。
+
+def register_data(data)
 
   puts '名前を入力してください'
   name = gets.chomp
-
   puts 'パンチ力を入力してください(0 ~ 100)'
-  panch = power(gets.to_i)
-
+  punch = power(gets.to_i)
   puts 'キック力を入力してください(0 ~ 100)'
   kick = power(gets.to_i)
-
   puts 'ジャンプ力を入力してください(0 ~ 100)'
   jump = power(gets.to_i)
 
-  person = {name: name, punch: punch, kick: kick, jump: jump}
+  person = {name: name, punch: punch, kick: kick, jump: jump, rank:hero_rank(punch,kick,jump)}
   data << person
 
 end
 
+def hero_rank(punch,kick,jump)
+  rank = punch + kick + jump
+end
+
+
 def power(power)
   while power > 100
-    puts '100以下の数字を入力してください。'
+    puts '100以下の数字を入力してください'
       power = gets.to_i
   end
   return power
@@ -55,7 +63,7 @@ end
 
 def show_data_list(data)
   puts '見たい人の番号を選択してください'
-  data.each_with_index do |person,  index|
+  data.each_with_index do |person, index|
     puts "#{index + 1}: #{person[:name]}"
   end
   input = gets.to_i - 1
@@ -64,6 +72,8 @@ def show_data_list(data)
   puts "パンチ力: #{person[:punch]}"
   puts "キック力: #{person[:kick]}"
   puts "ジャンプ力: #{person[:jump]}"
+  puts "ヒーローランク: #{person[:rank]}"
+
 end
 
 data = []

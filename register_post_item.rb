@@ -1,30 +1,36 @@
 def post_item(a_cart)
-  # 商品名、値段、個数を入力させ合計金額を出し、配列に保存してください。
-    puts "商品名を入力してください："
-    puts "値段を入力してください："
-    puts "個数を入力してください："
-  
-    line = "---------------------------"
-  
-  # 入力された値の描画
-    puts "商品名 : "
-    puts "値段 : "
-    puts "個数 : "
-    puts "合計金額 : "
-  
+  # 変数の定義
+  post = {}
+  puts "商品名を入力してください："
+  post[:name] = gets.chomp
+  puts "値段を入力してください："
+  post[:price] = gets.to_i
+  puts "個数を入力してください："
+  post[:count] = gets.to_i
+  line = "---------------------------"
+
+  # レビューの描画
+  puts "商品名 : #{post[:name]}\n#{line}"
+  puts "値段 : #{post[:price]}\n#{line}"
+  puts "個数 : #{post[:count]}\n#{line}"
+  puts "合計金額 :#{post[:price] * post[:count]}\n#{line}"
+
   # 配列オブジェクトに追加
-  
+  a_cart << post
+
   # a_cartをメソッドの呼び出し元に返す
-  
-  end
+  return a_cart
+end
   
   def check_items(a_cart)
-  # 保存された全商品の一覧を表示
-  # 商品名、値段、個数を表示
-  
-  # 全ての商品の合計金額を表示
-    puts "合計金額 : "
-  
+    # リストの表示
+    total_price = 0
+    line = "---------------------------"
+    a_cart.each do |post|
+      puts "#{post[:name]}/#{post[:price]}/#{post[:count]}\n#{line}"
+      total_price += post[:price] * post[:count]
+    end
+    puts "合計金額 : #{total_price}"
   end
   
   def end_program
@@ -38,13 +44,14 @@ def post_item(a_cart)
   cart = []             # 配列オブジェクトcartの生成
   
   while true do
-  # メニューの表示
+    # メニューの表示
     puts "商品数: #{cart.length}"
     puts "[0]商品をカートに入れる"
-    unless cart.empty?       #カートに商品がない場合は[1]は選択できない
+    unless cart.empty?
       puts "[1]カートを確認する"
     end
     puts "[2]アプリを終了する"
+  
     input = gets.to_i
   
     if input == 0 then
@@ -52,8 +59,8 @@ def post_item(a_cart)
     elsif input == 1 then
       check_items(cart) # check_itemsメソッドの呼び出し
     elsif input == 2 then
-      end_program     # end_programメソッドの呼び出し
+      end_program    # end_programメソッドの呼び出し
     else
-      exception           # exceptionメソッドの呼び出し
+      exception        # exceptionメソッドの呼び出し
     end
   end

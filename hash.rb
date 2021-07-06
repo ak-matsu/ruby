@@ -7,3 +7,8 @@ teacher[:name] = "Emma"
 puts student
 puts teacher
 puts teacher[:name]
+
+
+hash = {one: 1, two: 2, three: 3}
+puts hash.keys
+puts hash.values

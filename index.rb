@@ -26,3 +26,11 @@ width = 9
 
 # 変数lengthと変数widthを掛けて出力してください
 puts length * width
+
+languages = ["日本語", "英語", "スペイン語"]
+
+# インデックス番号が1の要素を出力してください
+puts languages[1]
+
+# インデックス番号が0の要素を使って「◯◯を話せます」となるように出力してください
+puts languages[0] + "を話せます"

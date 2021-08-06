@@ -34,3 +34,12 @@ puts languages[1]
 
 # インデックス番号が0の要素を使って「◯◯を話せます」となるように出力してください
 puts languages[0] + "を話せます"
+
+def introduce
+  puts "こんにちは"
+  puts "私はにんじゃわんこです"
+  puts "14歳です"  
+end
+
+puts "-----自己紹介-----"
+introduce

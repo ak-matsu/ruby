@@ -69,3 +69,11 @@ end
 s = Word.new("level") #新しいWordを作成、"level"で初期化
 puts s.palindrome? #Wordが回分か調べるメソッド
 puts s.length #WordはStringで扱える全てのメソッドを継承
+
+
+class String
+  def shuffle
+     self.split('').shuffle.join
+  end
+ end
+puts "foobar".shuffle

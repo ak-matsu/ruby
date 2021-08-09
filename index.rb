@@ -55,3 +55,7 @@ print_info
 city = "新宿区"
 prefecture = "東京都"
 puts "#{city} #{prefecture}"
+
+str = "tokyo,shinjuku"
+array = str.split(",").join
+puts array

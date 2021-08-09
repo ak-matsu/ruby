@@ -51,3 +51,7 @@ def print_info
 end
 # print_infoメソッドを呼び出してください
 print_info
+
+city = "新宿区"
+prefecture = "東京都"
+puts "#{city} #{prefecture}"

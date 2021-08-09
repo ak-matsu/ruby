@@ -73,7 +73,9 @@ puts s.length #WordはStringで扱える全てのメソッドを継承
 
 class String
   def shuffle
-     self.split('').shuffle.join
+    #   self.split('').shuffle.join
+    #   selfを削除しても動作可能
+    .split('').shuffle.join
   end
  end
 puts "foobar".shuffle

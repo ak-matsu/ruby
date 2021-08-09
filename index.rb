@@ -59,3 +59,13 @@ puts "#{city} #{prefecture}"
 str = "tokyo,shinjuku"
 array = str.split(",").join
 puts array
+
+class Word < String
+  def palindrome?
+    self == self.reverse
+  end
+end
+
+s = Word.new("level") #新しいWordを作成、"level"で初期化
+puts s.palindrome? #Wordが回分か調べるメソッド
+puts s.length #WordはStringで扱える全てのメソッドを継承

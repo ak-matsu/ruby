@@ -79,3 +79,5 @@ class String
   end
  end
 puts "foobar".shuffle
+
+# test

@@ -30,18 +30,7 @@ var week_ja= new Array("日","月","火","水","木","金","土");
 
 //年・月・日・曜日を書き出す
 document.write("DC"+(year-(1998))+"年"+month+"月"+day+"日 "+week_ja[week]+"曜日");
-
-
-//時刻データを取得して変数に格納する
-//変数は"time"とする
-var time= new Date();
-
-//時・分・秒を取得
-var hour = time.getHours();
-var minute = time.getMinutes();
-var second = time.getSeconds();
-
-document.write(hour+"時",+minute+"分"+second+"秒");
+setInterval('showClock1()',1000);
 
 function showClock1() {
   var nowTime = new Date();
@@ -51,4 +40,4 @@ function showClock1() {
   var msg = "現在時刻は、" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
   document.getElementById("RealtimeClockArea").innerHTML = msg;
 }
-setInterval('showClock1()',1000);
+

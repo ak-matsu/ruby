@@ -23,14 +23,21 @@ function getNow() {
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
 	var you = now.getDay(); //—j“ú(0`6=“ú`“y)
+  var eto = now.getFullYear()%13
   
 	//—j“ú‚Ì‘I‘ğˆ
 	var youbi = new Array("“ú","Œ","‰Î","…","–Ø","‹à","“y");
+  
+  //Š±x‚Ì‘I‘ğˆ
+  var etomareki = new Array("—d¸","‰Í“¶","‚Â‚¿‚Ì‚±","Oƒcñ—³","êK","ˆêŠpb","ƒ‚ƒOƒ‰ƒUƒ","‰»”L","‰Úå¯","‰Î‚Ì’¹","‰öŠïA•¨","l‹›","–é³");
 
 	//o—Í—p
-	var s = "D.C."+(year-1998)+year + "”N" + mon + "Œ" + day +  "“ú (" + youbi[you] + ")" + hour + "" + min + "•ª" + sec + "•b";
+	var s = "D.C."+(year-1998)+ "(" + year + ")" + "”N" + mon + "Œ" + day +  "“ú (" + youbi[you] + ")" + hour + "" + min + "•ª" + sec + "•b" + "<br>" + "ˆ«–‚Š±x "+etomareki[eto];
 	return s;
 }
 </script>
 </body>
 </html>
+
+
+<!--  + -->

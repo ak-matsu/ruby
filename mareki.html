@@ -5,10 +5,11 @@
   <title></title>
 </head>
 <body>
+  <font size="100%"><b>
 <span id="view_clock"></span>
 
 <script type="text/javascript">
-timerID = setInterval('clock()',500); //0.5•b–ˆ‚Éclock()‚ğÀs
+timerID = setInterval('clock()',500); //0.5ç§’æ¯ã«clock()ã‚’å®Ÿè¡Œ
 
 function clock() {
 	document.getElementById("view_clock").innerHTML = getNow();
@@ -17,27 +18,25 @@ function clock() {
 function getNow() {
 	var now = new Date();
 	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //‚P‚ğ‘«‚·‚±‚Æ
+	var mon = now.getMonth()+1; //ï¼‘ã‚’è¶³ã™ã“ã¨
 	var day = now.getDate();
 	var hour = now.getHours();
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
-	var you = now.getDay(); //—j“ú(0`6=“ú`“y)
+	var you = now.getDay(); //æ›œæ—¥(0ï½6=æ—¥ï½åœŸ)
   var eto = now.getFullYear()%13
   
-	//—j“ú‚Ì‘I‘ğˆ
-	var youbi = new Array("“ú","Œ","‰Î","…","–Ø","‹à","“y");
+	//æ›œæ—¥ã®é¸æŠè‚¢
+	var youbi = new Array("æ—¥","æœˆ","ç«","æ°´","æœ¨","é‡‘","åœŸ");
   
-  //Š±x‚Ì‘I‘ğˆ
-  var etomareki = new Array("—d¸","‰Í“¶","‚Â‚¿‚Ì‚±","Oƒcñ—³","êK","ˆêŠpb","ƒ‚ƒOƒ‰ƒUƒ","‰»”L","‰Úå¯","‰Î‚Ì’¹","‰öŠïA•¨","l‹›","–é³");
+  //å¹²æ”¯ã®é¸æŠè‚¢
+  var etomareki = new Array("å¦–ç²¾","æ²³ç«¥","ã¤ã¡ã®ã“","ä¸‰ãƒ„é¦–ç«œ","éµº","ä¸€è§’ç£","ãƒ¢ã‚°ãƒ©ã‚¶ãƒ¡","åŒ–çŒ«","è¦èŸ‡","ç«ã®é³¥","æ€ªå¥‡æ¤ç‰©","äººé­š","å¤œå‰");
 
-	//o—Í—p
-	var s = "D.C."+(year-1998)+ "(" + year + ")" + "”N" + mon + "Œ" + day +  "“ú (" + youbi[you] + ")" + hour + "" + min + "•ª" + sec + "•b" + "<br>" + "ˆ«–‚Š±x "+etomareki[eto];
+	//å‡ºåŠ›ç”¨
+	var s = "D.C."+(year-1998)+ "(" + year + ")" + "å¹´" + mon + "æœˆ" + day +  "æ—¥ (" + youbi[you] + ")" + hour + "æ™‚" + min + "åˆ†" + sec + "ç§’" + "<br>" + "æ‚ªé­”å¹²æ”¯ "+etomareki[eto];
 	return s;
 }
 </script>
+    </b></font>
 </body>
 </html>
-
-
-<!--  + -->
